@@ -1,0 +1,47 @@
+-- --ó·ëËÇP (p33)
+-- SELECt * FROM employee;
+-- --ó·ëËÇRÅip34Åj
+-- SELECT emp_name, sal from employee;
+-- --ó·ëË4(p34)
+-- SELECT emp_name, birthday, sal, sal*12 FROM employee;
+-- --ó·ëË5Åip35Åj
+-- SELECT emp_name, birthday, sal, sal*12 AS îNé˚ FROM employee;
+-- --ó·ëËÇUÅip35Åj
+-- SELECT emp_name, birthday, sal, sal*12, CAST(sal*12 AS int) AS îNé˚ FROM employee;
+-- --ó·ëËÇV(p36)
+-- SELECT emp_name, birthday, sal, (sal*12)::int AS îNé˚ FROM employee;
+-- --ó·ëËÇP(p36)
+-- SELECT 'íSìñé“' || emp_name || ' ÇÃíaê∂ì˙ÇÕ ' || birthday ||'Ç≈Ç∑ÅB 'AS íaê∂ì˙ FROM employee;
+-- --ó·ëËÇP(p37)
+-- SELECT emp_name, to_char(birthday, 'Day, Month DD, YYYY') FROM employee;
+-- --ó·ëËÇQ(p38)
+-- SELECT emp_name, to_char(sal * 1000, '9G999G999D99') FROM employee;
+-- --4.1.6
+-- SELECT emp_name, birthday, sal, comm, sal + comm AS é˚ì¸ FROM employee;
+-- --4.1.7Å@ó·ëË1(p41)
+-- SELECT emp_name, birthday, sal, comm, sal + COALESCE(COMM, 0)  FROM employee;
+-- --4.1.8 ó·ëË1(p42)
+-- SELECT emp_name,
+--         CASE gender
+--             WHEN = 1 THEN  'íj'
+--                     ELSE  'èó'
+--         END AS ê´ï 
+--     FROM employee;
+-- --ó·ëË5(p44)
+-- SELECT 
+--     emp_name,
+--     birthday,
+--     sal,
+--     comm, 
+--     sal + CASE WHEN comm IS NULL THEN 0 ELSE comm END
+-- FROM employee;
+--4.1.9Å@ó·ëËÇP
+-- SELECT * FROM employee ORDER BY birthday DESC;
+--4.1.9 ó·ëËÇQ
+--SELECT * FROM employee ORDER BY sal DESC;
+--4.1.9 ó·ëËÇR
+--SELECT * FROM employee ORDER BY gender, sal DESC;
+--4.1.9 ó·ëËÇS
+--SELECT emp_name, birthday, sal, comm, sal + comm  AS åéé˚ FROM employee ORDER BY åéé˚;
+--4.1.10 ó·ëËÇP
+--SELECT * FROM employee ORDER BY sal DESC LIMIT 3 OFFSET 1;
