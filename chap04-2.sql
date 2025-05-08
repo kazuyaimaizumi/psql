@@ -1,0 +1,59 @@
+--SELECT * FROM employee;
+--4.2.1 —á‘è1 (p52)
+--SELECT emp_name, sal FROM employee WHERE sal < 1500;
+--4.2.1 —á‘è2 (p53)
+--SELECT emp_name, sal FROM employee;
+--SELECT emp_name, sal FROM employee WHERE gender = 2;
+--4.2.1 —á‘è3 (p53)
+--SELECT emp_name, sal FROM employee WHERE emp_name = 'ˆÀ•” O]';
+--4.2.1 —á‘è4 (p54)
+--SELECT emp_name, sal, birthday FROM employee WHERE birthday >= '1980-01-01';
+--4.2.1 —á‘è5 (p54)
+--SELECT emp_name, sal, birthday FROM employee WHERE emp_id = 20;
+--4.2.2 —á‘è1 (p55)
+--SELECT * FROM employee;
+--SELECT 
+--  emp_name,
+--  sal 
+--FROM employee
+--WHERE sal >= 2000 AND sal <= 3000;
+-- SELECT 
+--  emp_name, 
+--  sal 
+-- FROM employee
+-- WHERE sal BETWEEN 2000 AND 3000;
+--4.2.2 —á‘è2 (p55)
+-- SELECT
+--     emp_name,
+--     sal
+-- FROM employee
+-- WHERE gender = 2 AND sal >= 2000;
+--4.2.2 —á‘è3 (p56)
+-- SELECT emp_name, sal, emp_id FROM employee WHERE emp_id = 2 OR emp_id = 4 OR emp_id = 7;
+-- SELECT emp_name, sal, emp_id FROM employee WHERE emp_id IN (2,4,7);
+--4.2.2 —á‘è4 (p56)
+--SELECT emp_name, sal, emp_id, gender FROM employee WHERE gender = 2 OR sal >= 2000;
+--4.2.2 —á‘è5 (p57)
+--SELECT emp_name, sal FROM employee WHERE ( gender = 2 ) OR ( sal BETWEEN 2000 AND 3000 );
+--4.2.5 —á‘è1 (p60)
+--SELECT * FROM customer WHERE address LIKE '%‘åãs%';
+--››‹æ‚ÅI‚í‚éZŠ‚Ìl
+--SELECT * FROM customer WHERE address LIKE '%‹æ';
+--“s‚ğŠÜ‚ŞZŠ
+--SELECT * FROM customer WHERE address LIKE '%“s%';
+--4.2.5 —á‘è2 (p60)
+--SELECT * FROM customer WHERE address NOT LIKE '“Œ‹“s%';
+--4.2.5 —á‘è3 (p61)
+--SELECT * FROM customer WHERE cust_name LIKE '_“c%';
+--›››˜a ‚ğŠÜ‚ŞŒÚ‹q–¼
+--SELECT * FROM customer WHERE cust_name LIKE '___˜a%';
+--4.2.6 —á‘è1 (p62)
+-- SELECT * FROM employee WHERE comm IS NULL;
+-- SELECT * FROM employee WHERE comm IS NOT NULL;
+
+--SELECT * FROM customer WHERE cust_name LIKE '_Œû%';
+--SELECT * FROM employee WHERE birthday <= '1980-01-01';
+
+--SELECT emp_name, birthday FROM employee WHERE birthday BETWEEN '1978-04-02' AND '1981-04-01';
+
+

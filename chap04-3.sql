@@ -1,0 +1,62 @@
+--4.3.1 例題1 (p67)
+-- SELECT
+--     count(*) --行数カウント
+-- FROM employee;
+-- SELECT
+--     count(comm)
+-- FROM employee;
+--4.3.1 例題2 (p67)
+-- SELECT
+--     sum(sal)
+-- FROM employee;
+--4.3.1 例題3 (p67)
+-- SELECT
+--     avg(sal)
+-- FROM employee;
+--4.3.1 例題4 (p68)
+
+-- SELECT
+--     count(*) AS 行数,
+--     sum(sal) AS 合計,
+--     avg(sal) AS 平均,
+--     max(sal) AS 最大値,
+--     min(sal) AS 最小値
+-- FROM employee;
+
+-- SELECT
+--     count(*) AS 行数,
+--     sum(sal) AS 合計,
+--     avg(sal) AS 平均,
+--     max(sal) AS 最大値,
+--     min(sal) AS 最小値
+-- FROM employee
+-- WHERE dept_id = 30;
+
+-- SELECT count(*) AS 行数 FROM employee WHERE comm IS NULL;
+-- SELECT count(DISTINCT dept_id) FROM employee;
+-- SELECT dept_id FROM employee;
+--4.3.2 例題1 (p71)
+-- SELECT 
+--     dept_id,
+--     count(*) AS 行数,
+--     sum(sal) AS 合計,
+--     avg(sal) AS 平均,
+--     max(sal) AS 最大値,
+--     min(sal) AS 最小値
+-- FROM employee GROUP BY dept_id ORDER BY dept_id;
+--4.3.2 例題2 (p71)
+-- SELECT gender, count(*) FROM employee GROUP BY gender ORDER BY gender;
+--4.3.2 例題3 (p72)
+-- SELECT dept_id, gender, count(*), avg(sal) FROM employee GROUP BY dept_id, gender ORDER BY dept_id, gender;
+--4.3.2 例題4 (p72)
+-- SELECT dept_id, gender, count(*), avg(sal) FROM employee GROUP BY gender, dept_id ORDER BY gender, dept_id;
+--4.3.2 例題5 (p73)
+-- SELECT dept_id, count(*) AS 行数, sum(sal) AS 合計,avg(sal) AS 平均,max(sal) AS 最大値,min(sal) AS 最小値
+-- FROM employee GROUP BY dept_id HAVING sum(sal) <= 5000 ORDER BY dept_id;
+--4.3.2 例題6 (p73)
+-- SELECT dept_id, count(*) AS 行数, sum(sal) AS 合計,avg(sal) AS 平均,max(sal) AS 最大値,min(sal) AS 最小値
+-- FROM employee WHERE gender = 1 GROUP BY dept_id HAVING sum(sal) <= 5000 ORDER BY dept_id;
+-- 4.3.3 例題1 (p74)
+-- SELECT DISTINCT dept_id FROM employee ORDER BY dept_id;
+-- 4.3.3 例題2 (p75)
+-- SELECT DISTINCT ON (dept_id) emp_name, dept_id, sal FROM employee ORDER BY dept_id, sal DESC;
