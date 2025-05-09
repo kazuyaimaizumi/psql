@@ -1,0 +1,4 @@
+-- 5.3.1 —á‘è1 (p120)
+-- DELETE FROM employee WHERE sal >= 5000;
+-- SELECT * FROM employee WHERE sal >= 5000;
+-- SELECT * FROM employee;

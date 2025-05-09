@@ -1,2 +1,6 @@
-SELECT birthday, gender FROM employee;
-SELECT emp_name, (sal + COALESCE(comm, 0))*3 FROM employee;
+-- SELECT birthday, gender FROM employee;
+-- SELECT emp_name, (sal + COALESCE(comm, 0))*3 FROM employee;
+-- SELECT * FROM employee ORDER BY birthday DESC ;
+-- SELECT * FROM product WHERE (cost BETWEEN 10000 AND 19999) AND (discount IS NULL);
+-- SELECT * FROM packedsales WHERE cust_address LIKE '%ç`ãÊ%';
+-- SELECT * FROM packedsales WHERE cust_id = 3;
